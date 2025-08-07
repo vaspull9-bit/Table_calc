@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <!-- Таблица 1: Курс валют -->
+        <TableRow>
+            <TextView android:text="Курс доллара" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Курс доллара">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/kursDollarEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Желтый фон -->
+        </TableRow>
+        
+        <TableRow>
+            <TextView android:text="Курс евро" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Курс евро">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/kursEuroEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Желтый фон -->
+        </TableRow>
+
+        <!-- Таблица 2: Конвертация -->
+        <TableRow>
+            <TextView android:text="Сумма в RUB:"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Сумма в RUB">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rubInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:text="USD:"/>
+            <TextView
+                android:id="@+id/usdOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000FF"
+                android:textColor="#FFFFFF"
+                android:padding="4dp"
+                android:minWidth="80dp" />
+            <TextView android:text="EUR:"
+                android:paddingStart="16dp"/>
+            <TextView
+                android:id="@+id/eurOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000FF"
+                android:textColor="#FFFFFF"
+                android:padding="4dp"
+                android:minWidth="80dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выполнить"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_marginTop="8dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Очистить"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
